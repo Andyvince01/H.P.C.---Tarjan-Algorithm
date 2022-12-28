@@ -5,8 +5,8 @@
 #include <stdbool.h>
 #include <math.h>
 
-#define MAX_NODES 9999
-#define MAX_EDGES 99999
+#define MAX_NODES 99999
+#define MAX_EDGES 999999
 
 typedef struct Graph {
   int num_nodes;
@@ -110,11 +110,11 @@ void readGraph(int **adj_matrix){
 
 int main() {
     Graph *graph = (Graph *)malloc(sizeof(Graph*));
-    graph->num_nodes = 500;
+    graph->num_nodes = 50;
     graph->num_edges = 0;
     graph->adjacency_matrix = (int **) malloc(graph->num_nodes * sizeof(int*));
     readGraph(graph->adjacency_matrix);
-  // Initialize the dfn, low, and on_stack arrays
+    // Initialize the dfn, low, and on_stack arrays
     memset(dfn, 0, sizeof(dfn));
     memset(low, 0, sizeof(low));
     memset(on_stack, 0, sizeof(on_stack));

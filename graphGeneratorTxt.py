@@ -1,11 +1,13 @@
 import numpy as np
 import struct
 
+size = 50
+
 # Crea una matrice di adiacenza di dimensione 10000x10000
-adj_matrix = np.zeros((500,500), dtype=np.uint8)
-for i in range(500):
-    k = np.random.randint(0,500)
-    j = np.random.randint(0,500)
+adj_matrix = np.zeros((size,size), dtype=np.uint8)
+for i in range(size):
+    k = np.random.randint(0,size)
+    j = np.random.randint(0,size)
     adj_matrix[k][j] = 1
 #adj_matrix = np.random.choice([0, 1], size=(1000,1000), p=[0.9999, 0.0001])
 # Salva la matrice di adiacenza su file
